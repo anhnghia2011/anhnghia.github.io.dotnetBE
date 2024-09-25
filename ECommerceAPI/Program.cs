@@ -1,9 +1,23 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using ECommerceAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
 
+// Đăng ký DBContext với Dependency Injection, sử dụng chuỗi kết nối "DefaultConnection"
+builder.Services.AddDbContext<DBContextHangHoa>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Đăng ký CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyMethod()
+                          .AllowAnyHeader());
+});
+
+// Đăng ký các dịch vụ khác
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -17,6 +31,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Sử dụng CORS
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
