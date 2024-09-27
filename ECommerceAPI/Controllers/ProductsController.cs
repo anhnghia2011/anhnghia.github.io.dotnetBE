@@ -13,14 +13,14 @@ public class ProductsController : ControllerBase
         _context = context;
     }
 
-    // GET: api/products
+    // Lấy danh sách tất cả sản phẩm
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
     {
-        return await _context.Products.ToListAsync();
+        return await _context.Products.Include(p => p.Category).ToListAsync();
     }
 
-    // GET: api/products/5
+    // Lấy thông tin sản phẩm theo id
     [HttpGet("{id}")]
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
@@ -34,7 +34,7 @@ public class ProductsController : ControllerBase
         return product;
     }
 
-    // POST: api/products
+    // Thêm sản phẩm mới
     [HttpPost]
     public async Task<ActionResult<Product>> PostProduct(Product product)
     {
@@ -44,7 +44,7 @@ public class ProductsController : ControllerBase
         return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
     }
 
-    // PUT: api/products/5
+    // Cập nhật sản phẩm
     [HttpPut("{id}")]
     public async Task<IActionResult> PutProduct(int id, Product product)
     {
@@ -54,27 +54,12 @@ public class ProductsController : ControllerBase
         }
 
         _context.Entry(product).State = EntityState.Modified;
-
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!_context.Products.Any(e => e.Id == id))
-            {
-                return NotFound();
-            }
-            else
-            {
-                throw;
-            }
-        }
+        await _context.SaveChangesAsync();
 
         return NoContent();
     }
 
-    // DELETE: api/products/5
+    // Xóa sản phẩm
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteProduct(int id)
     {

@@ -420,3 +420,4 @@ C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\
 C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.pdb
 C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.genruntimeconfig.cache
 C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ref\ECommerceAPI.dll
+C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
