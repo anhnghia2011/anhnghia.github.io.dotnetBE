@@ -4702,11 +4702,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nghia.nguyen\\Desktop\\ECommerceAPI\\ECommerceAPI\\ECommerceAPI.csproj",
+      "projectUniqueName": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\ECommerceAPI.csproj",
       "projectName": "ECommerceAPI",
-      "projectPath": "C:\\Users\\nghia.nguyen\\Desktop\\ECommerceAPI\\ECommerceAPI\\ECommerceAPI.csproj",
+      "projectPath": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\ECommerceAPI.csproj",
       "packagesPath": "C:\\Users\\nghia.nguyen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nghia.nguyen\\Desktop\\ECommerceAPI\\ECommerceAPI\\obj\\",
+      "outputPath": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nghia.nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
