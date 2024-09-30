@@ -7,13 +7,8 @@
         public string Description { get; set; } // Mô tả sản phẩm
         public decimal Price { get; set; } // Giá sản phẩm
         public string ImageUrl { get; set; } // Đường dẫn hình ảnh
-        public int CategoryId { get; set; } // ID danh mục
-        public Category Category { get; set; } // Tham chiếu đến danh mục
-
-        // Thêm thuộc tính giới tính
-        public string Gender { get; set; } // "Nam", "Nữ", hoặc "Trẻ em"
-
-        // Thêm thuộc tính mới
+        public int CategoryId { get; set; }
+        public string Gender { get; set; } 
         public bool IsNew { get; set; } // Xác định sản phẩm mới
         public decimal? DiscountPrice { get; set; } // Giá giảm (nếu có)
         public DateTime? StartDate { get; set; } // Ngày bắt đầu giảm giá

@@ -27,7 +27,7 @@ namespace NikeShoeStoreAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            var product = await _context.Products.FindAsync(id);
+            var product = await _context.Products.Include(p => p.Category).FirstOrDefaultAsync(p => p.Id == id);
 
             if (product == null)
             {
@@ -37,10 +37,26 @@ namespace NikeShoeStoreAPI.Controllers
             return product;
         }
 
-        // Thêm sản phẩm mới
+        // Tạo sản phẩm mới
         [HttpPost]
-        public async Task<ActionResult<Product>> PostProduct(Product product)
+        public async Task<IActionResult> CreateProduct([FromBody] Product product)
         {
+            if (product == null)
+            {
+                return BadRequest("Product data is null.");
+            }
+
+            // Kiểm tra xem danh mục có tồn tại không bằng cách sử dụng categoryId
+            var category = await _context.Categories.FindAsync(product.CategoryId);
+            if (category == null)
+            {
+                return BadRequest("Category does not exist.");
+            }
+
+            // Nếu cần thiết, có thể gán Category vào sản phẩm
+            product.Category = category;
+
+            // Thêm sản phẩm vào cơ sở dữ liệu
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
@@ -110,6 +126,5 @@ namespace NikeShoeStoreAPI.Controllers
 
             return products;
         }
-
     }
 }

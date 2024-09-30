@@ -336,7 +336,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[NikeShoeStoreApi.Models.Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -348,7 +348,7 @@
   },
   {
     "ContainingType": "NikeShoeStoreAPI.Controllers.ProductsController",
-    "Method": "PostProduct",
+    "Method": "CreateProduct",
     "RelativePath": "api/Products",
     "HttpMethod": "POST",
     "IsController": true,
@@ -356,21 +356,11 @@
     "Parameters": [
       {
         "Name": "product",
-        "Type": "NikeShoeStoreApi.Models.Product",
+        "Type": "Product",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "NikeShoeStoreApi.Models.Product",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "NikeShoeStoreAPI.Controllers.ProductsController",
@@ -388,7 +378,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "NikeShoeStoreApi.Models.Product",
+        "Type": "Product",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -413,7 +403,7 @@
       },
       {
         "Name": "product",
-        "Type": "NikeShoeStoreApi.Models.Product",
+        "Type": "Product",
         "IsRequired": true
       }
     ],
@@ -451,7 +441,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[NikeShoeStoreApi.Models.Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
