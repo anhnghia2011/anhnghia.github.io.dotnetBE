@@ -1,10 +1,11 @@
-﻿using ECommerceAPI.Models;
+﻿using NikeShoeStoreApi.Models;
 using Microsoft.EntityFrameworkCore;
+using ECommerceAPI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Đăng ký DBContext với Dependency Injection, sử dụng chuỗi kết nối "DefaultConnection"
-builder.Services.AddDbContext<DBContextHangHoa>(options =>
+builder.Services.AddDbContext<DBContextNikeShoeStore>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Đăng ký CORS
