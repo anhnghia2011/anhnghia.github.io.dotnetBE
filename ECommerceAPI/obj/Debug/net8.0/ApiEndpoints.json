@@ -336,7 +336,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[NikeShoeStoreApi.Models.Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -356,7 +356,7 @@
     "Parameters": [
       {
         "Name": "product",
-        "Type": "Product",
+        "Type": "NikeShoeStoreApi.Models.Product",
         "IsRequired": true
       }
     ],
@@ -378,7 +378,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Product",
+        "Type": "NikeShoeStoreApi.Models.Product",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -403,7 +403,7 @@
       },
       {
         "Name": "product",
-        "Type": "Product",
+        "Type": "NikeShoeStoreApi.Models.Product",
         "IsRequired": true
       }
     ],
@@ -441,7 +441,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[NikeShoeStoreApi.Models.Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

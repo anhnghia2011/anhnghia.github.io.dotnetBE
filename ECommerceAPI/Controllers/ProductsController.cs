@@ -46,14 +46,14 @@ namespace NikeShoeStoreAPI.Controllers
                 return BadRequest("Product data is null.");
             }
 
-            // Kiểm tra xem danh mục có tồn tại không bằng cách sử dụng categoryId
+            // Kiểm tra xem danh mục có tồn tại không bằng cách sử dụng CategoryId
             var category = await _context.Categories.FindAsync(product.CategoryId);
             if (category == null)
             {
                 return BadRequest("Category does not exist.");
             }
 
-            // Nếu cần thiết, có thể gán Category vào sản phẩm
+            // Gán danh mục cho sản phẩm
             product.Category = category;
 
             // Thêm sản phẩm vào cơ sở dữ liệu
@@ -65,13 +65,22 @@ namespace NikeShoeStoreAPI.Controllers
 
         // Cập nhật sản phẩm
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProduct(int id, Product product)
+        public async Task<IActionResult> PutProduct(int id, [FromBody] Product product)
         {
             if (id != product.Id)
             {
-                return BadRequest();
+                return BadRequest("Product ID mismatch.");
             }
 
+            // Kiểm tra xem danh mục có tồn tại không trước khi cập nhật
+            var category = await _context.Categories.FindAsync(product.CategoryId);
+            if (category == null)
+            {
+                return BadRequest("Category does not exist.");
+            }
+
+            // Gán danh mục cho sản phẩm
+            product.Category = category;
             _context.Entry(product).State = EntityState.Modified;
 
             try
@@ -82,11 +91,11 @@ namespace NikeShoeStoreAPI.Controllers
             {
                 if (!ProductExists(id))
                 {
-                    return NotFound();
+                    return NotFound("Product not found.");
                 }
                 else
                 {
-                    throw;
+                    throw; // Ném lại ngoại lệ để xử lý sau
                 }
             }
 
@@ -100,7 +109,7 @@ namespace NikeShoeStoreAPI.Controllers
             var product = await _context.Products.FindAsync(id);
             if (product == null)
             {
-                return NotFound();
+                return NotFound("Product not found.");
             }
 
             _context.Products.Remove(product);
@@ -123,6 +132,11 @@ namespace NikeShoeStoreAPI.Controllers
                 .Where(p => p.Gender.Equals(gender, StringComparison.OrdinalIgnoreCase))
                 .Include(p => p.Category)
                 .ToListAsync();
+
+            if (!products.Any())
+            {
+                return NotFound("No products found for the specified gender.");
+            }
 
             return products;
         }

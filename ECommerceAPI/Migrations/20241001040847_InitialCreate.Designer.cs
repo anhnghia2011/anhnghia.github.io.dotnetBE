@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ECommerceAPI.Migrations
 {
     [DbContext(typeof(DBContextNikeShoeStore))]
-    [Migration("20240930102443_InitialCreate")]
+    [Migration("20241001040847_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -207,17 +207,12 @@ namespace ECommerceAPI.Migrations
             modelBuilder.Entity("NikeShoeStoreApi.Models.Product", b =>
                 {
                     b.HasOne("NikeShoeStoreApi.Models.Category", "Category")
-                        .WithMany("Products")
+                        .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("NikeShoeStoreApi.Models.Category", b =>
-                {
-                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("NikeShoeStoreApi.Models.Customer", b =>
