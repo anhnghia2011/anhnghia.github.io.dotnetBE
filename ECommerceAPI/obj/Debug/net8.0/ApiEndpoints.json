@@ -109,6 +109,68 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ECommerceAPI.Controllers.classicproductController",
+    "Method": "GetProducts",
+    "RelativePath": "api/classicproduct",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[NikeShoeStoreApi.Models.Product, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ECommerceAPI.Controllers.classicproductController",
+    "Method": "CreateProduct",
+    "RelativePath": "api/classicproduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productClassic",
+        "Type": "ECommerceAPI.Models.ProductClassic",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ECommerceAPI.Models.ProductClassic",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ECommerceAPI.Controllers.classicproductController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/classicproduct/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NikeShoeStoreAPI.Controllers.CustomersController",
     "Method": "GetCustomers",
     "RelativePath": "api/Customers",
