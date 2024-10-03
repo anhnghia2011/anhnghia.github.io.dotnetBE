@@ -3,68 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\migrations\\20241002100921_initcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\migrations\\20241002100921_initcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\classicproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\classicproductcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\classicproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\classicproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Migrations\\20241003090844_DatabaseNike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ECommerceAPI\\Migrations\\20241003090844_DatabaseNike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\data\\dbcontextnikeshoestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\data\\dbcontextnikeshoestore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\ecommerceapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\ecommerceapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\models\\products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\ecommerceapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\ecommerceapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|c:\\users\\nghia.nguyen\\documents\\github\\anhnghia.github.io.dotnetbe\\ecommerceapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C142144A-072A-40A1-B9C9-14F76D2B2AAD}|ECommerceAPI\\ECommerceAPI.csproj|solutionrelative:ecommerceapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Migrations\\20241001031849_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,195 +99,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "20241002100921_InitCreate.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Migrations\\20241002100921_InitCreate.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Migrations\\20241002100921_InitCreate.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Migrations\\20241002100921_InitCreate.cs",
-              "RelativeToolTip": "ECommerceAPI\\Migrations\\20241002100921_InitCreate.cs",
+              "Title": "20241003090844_DatabaseNike.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Migrations\\20241003090844_DatabaseNike.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Migrations\\20241003090844_DatabaseNike.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Migrations\\20241003090844_DatabaseNike.cs",
+              "RelativeToolTip": "ECommerceAPI\\Migrations\\20241003090844_DatabaseNike.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T10:09:21.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "classicproductController.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\classicproductController.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\classicproductController.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\classicproductController.cs",
-              "RelativeToolTip": "ECommerceAPI\\Controllers\\classicproductController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T10:01:19.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClassicProduct.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\ClassicProduct.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\ClassicProduct.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\ClassicProduct.cs",
-              "RelativeToolTip": "ECommerceAPI\\Models\\ClassicProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T09:58:03.761Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Program.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Program.cs",
-              "RelativeToolTip": "ECommerceAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T09:58:22.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "ECommerceAPI\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T09:57:42.409Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "ECommerceAPI\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T09:59:03.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Products.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Products.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Products.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Products.cs",
-              "RelativeToolTip": "ECommerceAPI\\Models\\Products.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T09:57:20.26Z",
+              "WhenOpened": "2024-10-03T09:08:45.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "CustomersController.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\CustomersController.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\CustomersController.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\CustomersController.cs",
-              "RelativeToolTip": "ECommerceAPI\\Controllers\\CustomersController.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T10:08:36.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "ECommerceAPI\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T09:57:15.597Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DBContextNikeShoeStore.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Data\\DBContextNikeShoeStore.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Data\\DBContextNikeShoeStore.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Data\\DBContextNikeShoeStore.cs",
-              "RelativeToolTip": "ECommerceAPI\\Data\\DBContextNikeShoeStore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T10:09:39.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "ECommerceAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\appsettings.json",
-              "RelativeToolTip": "ECommerceAPI\\appsettings.json",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-24T09:56:14.481Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ECommerceAPI.http",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\ECommerceAPI.http",
-              "RelativeDocumentMoniker": "ECommerceAPI\\ECommerceAPI.http",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\ECommerceAPI.http",
-              "RelativeToolTip": "ECommerceAPI\\ECommerceAPI.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-09-24T10:03:23.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "OrderDetail.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\OrderDetail.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\OrderDetail.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\OrderDetail.cs",
-              "RelativeToolTip": "ECommerceAPI\\Models\\OrderDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T06:28:04.616Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Order.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Order.cs",
-              "RelativeToolTip": "ECommerceAPI\\Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T06:26:23.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Customer.cs",
-              "RelativeToolTip": "ECommerceAPI\\Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T06:28:59.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Category.cs",
               "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Category.cs",
@@ -295,7 +119,190 @@
               "RelativeToolTip": "ECommerceAPI\\Models\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T06:26:04.983Z"
+              "WhenOpened": "2024-09-27T06:26:04.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Customer.cs",
+              "RelativeToolTip": "ECommerceAPI\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:28:59.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DBContextNikeShoeStore.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Data\\DBContextNikeShoeStore.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Data\\DBContextNikeShoeStore.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Data\\DBContextNikeShoeStore.cs",
+              "RelativeToolTip": "ECommerceAPI\\Data\\DBContextNikeShoeStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T10:09:39.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Order.cs",
+              "RelativeToolTip": "ECommerceAPI\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:26:23.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "ECommerceAPI\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T09:59:03.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "ECommerceAPI\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:57:15.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\CustomersController.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "ECommerceAPI\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T10:08:36.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "ECommerceAPI\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:57:42.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\OrderDetail.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "ECommerceAPI\\Models\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:28:04.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Products.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Products.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Models\\Products.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Models\\Products.cs",
+              "RelativeToolTip": "ECommerceAPI\\Models\\Products.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T09:57:20.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ECommerceAPI\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\appsettings.Development.json",
+              "RelativeToolTip": "ECommerceAPI\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-03T08:59:25.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ECommerceAPI.http",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\ECommerceAPI.http",
+              "RelativeDocumentMoniker": "ECommerceAPI\\ECommerceAPI.http",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\ECommerceAPI.http",
+              "RelativeToolTip": "ECommerceAPI\\ECommerceAPI.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-09-24T10:03:23.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "ECommerceAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\appsettings.json",
+              "RelativeToolTip": "ECommerceAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-24T09:56:14.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Program.cs",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Program.cs",
+              "RelativeToolTip": "ECommerceAPI\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T09:58:22.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ECommerceAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\nghia.nguyen\\Documents\\GitHub\\anhnghia.github.io.dotnetBE\\ECommerceAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ECommerceAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-03T08:56:06.854Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

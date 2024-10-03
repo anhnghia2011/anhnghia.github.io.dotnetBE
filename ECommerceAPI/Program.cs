@@ -1,6 +1,6 @@
 ﻿using NikeShoeStoreApi.Models;
 using Microsoft.EntityFrameworkCore;
-using ECommerceAPI.Data;
+using NikeShoeStoreApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

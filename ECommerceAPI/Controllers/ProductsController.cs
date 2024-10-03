@@ -1,4 +1,4 @@
-﻿using ECommerceAPI.Data;
+﻿using NikeShoeStoreApi.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NikeShoeStoreApi.Models;
@@ -31,7 +31,7 @@ namespace NikeShoeStoreAPI.Controllers
 
             if (product == null)
             {
-                return NotFound();
+                return NotFound("Product not found.");
             }
 
             return product;
@@ -136,6 +136,40 @@ namespace NikeShoeStoreAPI.Controllers
             if (!products.Any())
             {
                 return NotFound("No products found for the specified gender.");
+            }
+
+            return products;
+        }
+
+        // Lấy danh sách sản phẩm theo danh mục
+        [HttpGet("category/{categoryId}")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetProductsByCategory(int categoryId)
+        {
+            var products = await _context.Products
+                .Where(p => p.CategoryId == categoryId)
+                .Include(p => p.Category)
+                .ToListAsync();
+
+            if (!products.Any())
+            {
+                return NotFound("No products found for the specified category.");
+            }
+
+            return products;
+        }
+
+        // Lấy danh sách sản phẩm theo spotlight
+        [HttpGet("spotlight")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetSpotlightProducts()
+        {
+            var products = await _context.Products
+                .Where(p => p.Spotlight)
+                .Include(p => p.Category)
+                .ToListAsync();
+
+            if (!products.Any())
+            {
+                return NotFound("No spotlight products found.");
             }
 
             return products;

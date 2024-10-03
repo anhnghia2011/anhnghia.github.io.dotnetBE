@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.EntityFrameworkCore;
 using NikeShoeStoreApi.Models;
 
-namespace ECommerceAPI.Data
+namespace NikeShoeStoreApi.Data
 {
     public class DBContextNikeShoeStore : DbContext
     {

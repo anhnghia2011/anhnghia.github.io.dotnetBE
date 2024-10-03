@@ -13,6 +13,7 @@
         public decimal? DiscountPrice { get; set; } // Giá giảm (nếu có)
         public DateTime? StartDate { get; set; } // Ngày bắt đầu giảm giá
         public DateTime? EndDate { get; set; } // Ngày kết thúc giảm giá
+        public bool Spotlight { get; set; } // Sản phẩm nổi bật
 
         // Thuộc tính điều hướng để truy cập danh mục
         public Category Category { get; set; } // Danh mục của sản phẩm
