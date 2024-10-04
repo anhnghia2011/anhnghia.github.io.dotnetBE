@@ -16,14 +16,12 @@ namespace NikeShoeStoreAPI.Controllers
             _context = context;
         }
 
-        // Lấy danh sách tất cả đơn hàng
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
         {
             return await _context.Orders.Include(o => o.Customer).ToListAsync();
         }
 
-        // Lấy thông tin đơn hàng theo id
         [HttpGet("{id}")]
         public async Task<ActionResult<Order>> GetOrder(int id)
         {
@@ -37,7 +35,6 @@ namespace NikeShoeStoreAPI.Controllers
             return order;
         }
 
-        // Thêm đơn hàng mới
         [HttpPost]
         public async Task<ActionResult<Order>> PostOrder(Order order)
         {
@@ -47,7 +44,6 @@ namespace NikeShoeStoreAPI.Controllers
             return CreatedAtAction(nameof(GetOrder), new { id = order.Id }, order);
         }
 
-        // Cập nhật đơn hàng
         [HttpPut("{id}")]
         public async Task<IActionResult> PutOrder(int id, Order order)
         {
@@ -77,7 +73,6 @@ namespace NikeShoeStoreAPI.Controllers
             return NoContent();
         }
 
-        // Xóa đơn hàng
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)
         {
@@ -93,7 +88,6 @@ namespace NikeShoeStoreAPI.Controllers
             return NoContent();
         }
 
-        // Kiểm tra xem đơn hàng có tồn tại hay không
         private bool OrderExists(int id)
         {
             return _context.Orders.Any(e => e.Id == id);

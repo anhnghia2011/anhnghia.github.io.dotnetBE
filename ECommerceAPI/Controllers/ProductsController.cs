@@ -16,14 +16,12 @@ namespace NikeShoeStoreAPI.Controllers
             _context = context;
         }
 
-        // Lấy danh sách tất cả sản phẩm
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             return await _context.Products.Include(p => p.Category).ToListAsync();
         }
 
-        // Lấy thông tin sản phẩm theo id
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
@@ -37,7 +35,6 @@ namespace NikeShoeStoreAPI.Controllers
             return product;
         }
 
-        // Tạo sản phẩm mới
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromBody] Product product)
         {
@@ -46,24 +43,20 @@ namespace NikeShoeStoreAPI.Controllers
                 return BadRequest("Product data is null.");
             }
 
-            // Kiểm tra xem danh mục có tồn tại không bằng cách sử dụng CategoryId
             var category = await _context.Categories.FindAsync(product.CategoryId);
             if (category == null)
             {
                 return BadRequest("Category does not exist.");
             }
 
-            // Gán danh mục cho sản phẩm
             product.Category = category;
 
-            // Thêm sản phẩm vào cơ sở dữ liệu
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
         }
 
-        // Cập nhật sản phẩm
         [HttpPut("{id}")]
         public async Task<IActionResult> PutProduct(int id, [FromBody] Product product)
         {
@@ -72,14 +65,12 @@ namespace NikeShoeStoreAPI.Controllers
                 return BadRequest("Product ID mismatch.");
             }
 
-            // Kiểm tra xem danh mục có tồn tại không trước khi cập nhật
             var category = await _context.Categories.FindAsync(product.CategoryId);
             if (category == null)
             {
                 return BadRequest("Category does not exist.");
             }
 
-            // Gán danh mục cho sản phẩm
             product.Category = category;
             _context.Entry(product).State = EntityState.Modified;
 
@@ -95,14 +86,13 @@ namespace NikeShoeStoreAPI.Controllers
                 }
                 else
                 {
-                    throw; // Ném lại ngoại lệ để xử lý sau
+                    throw; 
                 }
             }
 
             return NoContent();
         }
 
-        // Xóa sản phẩm
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
@@ -118,18 +108,16 @@ namespace NikeShoeStoreAPI.Controllers
             return NoContent();
         }
 
-        // Kiểm tra xem sản phẩm có tồn tại hay không
         private bool ProductExists(int id)
         {
             return _context.Products.Any(e => e.Id == id);
         }
 
-        // Lấy danh sách sản phẩm theo giới tính
         [HttpGet("gender/{gender}")]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductsByGender(string gender)
         {
             var products = await _context.Products
-                .Where(p => p.Gender.Equals(gender, StringComparison.OrdinalIgnoreCase))
+                .Where(p => p.Gender.ToLower() == gender.ToLower())
                 .Include(p => p.Category)
                 .ToListAsync();
 
@@ -141,7 +129,7 @@ namespace NikeShoeStoreAPI.Controllers
             return products;
         }
 
-        // Lấy danh sách sản phẩm theo danh mục
+
         [HttpGet("category/{categoryId}")]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductsByCategory(int categoryId)
         {
@@ -158,7 +146,6 @@ namespace NikeShoeStoreAPI.Controllers
             return products;
         }
 
-        // Lấy danh sách sản phẩm theo spotlight
         [HttpGet("spotlight")]
         public async Task<ActionResult<IEnumerable<Product>>> GetSpotlightProducts()
         {

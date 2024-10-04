@@ -16,14 +16,12 @@ namespace NikeShoeStoreAPI.Controllers
             _context = context;
         }
 
-        // Lấy danh sách tất cả danh mục
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Category>>> GetCategories()
         {
             return await _context.Categories.ToListAsync();
         }
 
-        // Lấy thông tin danh mục theo id
         [HttpGet("{id}")]
         public async Task<ActionResult<Category>> GetCategory(int id)
         {
@@ -37,7 +35,6 @@ namespace NikeShoeStoreAPI.Controllers
             return category;
         }
 
-        // Thêm danh mục mới
         [HttpPost]
         public async Task<ActionResult<Category>> PostCategory(Category category)
         {
@@ -47,7 +44,6 @@ namespace NikeShoeStoreAPI.Controllers
             return CreatedAtAction(nameof(GetCategory), new { id = category.Id }, category);
         }
 
-        // Cập nhật danh mục
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCategory(int id, Category category)
         {
@@ -77,7 +73,6 @@ namespace NikeShoeStoreAPI.Controllers
             return NoContent();
         }
 
-        // Xóa danh mục
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
@@ -93,7 +88,6 @@ namespace NikeShoeStoreAPI.Controllers
             return NoContent();
         }
 
-        // Kiểm tra xem danh mục có tồn tại hay không
         private bool CategoryExists(int id)
         {
             return _context.Categories.Any(e => e.Id == id);

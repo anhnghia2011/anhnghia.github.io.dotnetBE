@@ -4,11 +4,9 @@ using NikeShoeStoreApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Đăng ký DBContext với Dependency Injection, sử dụng chuỗi kết nối "DefaultConnection"
 builder.Services.AddDbContext<DBContextNikeShoeStore>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Đăng ký CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -17,14 +15,12 @@ builder.Services.AddCors(options =>
                           .AllowAnyHeader());
 });
 
-// Đăng ký các dịch vụ khác
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -33,7 +29,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Sử dụng CORS
 app.UseCors("AllowAll");
 
 app.UseAuthorization();
