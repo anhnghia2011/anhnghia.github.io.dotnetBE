@@ -1,96 +1,129 @@
-﻿using NikeShoeStoreApi.Data;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NikeShoeStoreApi.Data;
 using NikeShoeStoreApi.Models;
+using Newtonsoft.Json;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Net.Http;
 
-namespace NikeShoeStoreAPI.Controllers
+namespace NikeShoeStoreApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class CustomersController : ControllerBase
     {
         private readonly DBContextNikeShoeStore _context;
+        private readonly HttpClient _httpClient;
+        private readonly IConfiguration _configuration;
 
-        public CustomersController(DBContextNikeShoeStore context)
+        public CustomersController(DBContextNikeShoeStore context, HttpClient httpClient, IConfiguration configuration)
         {
             _context = context;
+            _httpClient = httpClient;
+            _configuration = configuration;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Customer>>> GetCustomers()
+        [HttpPost("register")]
+        public async Task<ActionResult<Customer>> Register(RegisterDto registerDto)
         {
-            return await _context.Customers.ToListAsync();
-        }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Customer>> GetCustomer(int id)
-        {
-            var customer = await _context.Customers.FindAsync(id);
-
-            if (customer == null)
+            // Check if email already exists
+            if (await _context.Customers.AnyAsync(c => c.Email == registerDto.Email))
             {
-                return NotFound();
+                return BadRequest("Email already in use.");
             }
 
-            return customer;
-        }
+            // Create new customer
+            var customer = new Customer
+            {
+                FirstName = registerDto.FirstName,
+                LastName = registerDto.LastName,
+                Email = registerDto.Email,
+                PhoneNumber = registerDto.PhoneNumber,
+                Password = HashPassword(registerDto.Password) // Mã hóa mật khẩu
+            };
 
-        [HttpPost]
-        public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
-        {
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetCustomer), new { id = customer.Id }, customer);
+            return Ok(new
+            {
+                Id = customer.Id,
+                FirstName = customer.FirstName,
+                LastName = customer.LastName,
+                Email = customer.Email,
+                PhoneNumber = customer.PhoneNumber
+            });
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutCustomer(int id, Customer customer)
+        [HttpPost("login")]
+        public async Task<ActionResult<Customer>> Login(LoginDto loginDto)
         {
-            if (id != customer.Id)
+            // Find user by email
+            var customer = await _context.Customers.SingleOrDefaultAsync(c => c.Email == loginDto.Email);
+            if (customer == null || !VerifyPassword(loginDto.Password, customer.Password)) // So sánh mật khẩu đã mã hóa
             {
-                return BadRequest();
+                return BadRequest("Invalid credentials.");
             }
 
-            _context.Entry(customer).State = EntityState.Modified;
-
-            try
+            return Ok(new
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!CustomerExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+                Id = customer.Id,
+                FirstName = customer.FirstName,
+                LastName = customer.LastName,
+                Email = customer.Email,
+                PhoneNumber = customer.PhoneNumber
+            });
+        }
 
-            return NoContent();
+        [HttpGet("all")]
+        public async Task<ActionResult<IEnumerable<Customer>>> GetAllCustomers()
+        {
+            var customers = await _context.Customers.ToListAsync();
+            return Ok(customers);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCustomer(int id)
+        public async Task<IActionResult> DeleteAccount(int id)
         {
+            // Tìm người dùng theo ID
             var customer = await _context.Customers.FindAsync(id);
             if (customer == null)
             {
-                return NotFound();
+                return NotFound("User not found.");
             }
 
+            // Xóa tài khoản
             _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            // Trả về thông báo thành công
+            return NoContent(); // Trả về 204 No Content khi xóa thành công
         }
 
-        private bool CustomerExists(int id)
+        // Phương thức để mã hóa mật khẩu
+        private string HashPassword(string password)
         {
-            return _context.Customers.Any(e => e.Id == id);
+            using (var hmac = new HMACSHA512())
+            {
+                var passwordSalt = hmac.Key; // Tạo salt từ key của HMAC
+                var passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password)); // Mã hóa mật khẩu
+                // Lưu trữ salt và hash ở nơi thích hợp
+                return Convert.ToBase64String(passwordHash);
+            }
+        }
+
+        // Phương thức để xác thực mật khẩu
+        private bool VerifyPassword(string password, string storedHash)
+        {
+            var storedHashBytes = Convert.FromBase64String(storedHash);
+            using (var hmac = new HMACSHA512())
+            {
+                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+                return computedHash.SequenceEqual(storedHashBytes);
+            }
         }
     }
 }

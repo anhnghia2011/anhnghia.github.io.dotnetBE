@@ -109,9 +109,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "NikeShoeStoreAPI.Controllers.CustomersController",
-    "Method": "GetCustomers",
-    "RelativePath": "api/Customers",
+    "ContainingType": "NikeShoeStoreApi.Controllers.CustomersController",
+    "Method": "DeleteAccount",
+    "RelativePath": "api/Customers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NikeShoeStoreApi.Controllers.CustomersController",
+    "Method": "GetAllCustomers",
+    "RelativePath": "api/Customers/all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -129,16 +145,16 @@
     ]
   },
   {
-    "ContainingType": "NikeShoeStoreAPI.Controllers.CustomersController",
-    "Method": "PostCustomer",
-    "RelativePath": "api/Customers",
+    "ContainingType": "NikeShoeStoreApi.Controllers.CustomersController",
+    "Method": "Login",
+    "RelativePath": "api/Customers/login",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "customer",
-        "Type": "NikeShoeStoreApi.Models.Customer",
+        "Name": "loginDto",
+        "Type": "NikeShoeStoreApi.Models.LoginDto",
         "IsRequired": true
       }
     ],
@@ -155,16 +171,16 @@
     ]
   },
   {
-    "ContainingType": "NikeShoeStoreAPI.Controllers.CustomersController",
-    "Method": "GetCustomer",
-    "RelativePath": "api/Customers/{id}",
-    "HttpMethod": "GET",
+    "ContainingType": "NikeShoeStoreApi.Controllers.CustomersController",
+    "Method": "Register",
+    "RelativePath": "api/Customers/register",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "registerDto",
+        "Type": "NikeShoeStoreApi.Models.RegisterDto",
         "IsRequired": true
       }
     ],
@@ -179,43 +195,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "NikeShoeStoreAPI.Controllers.CustomersController",
-    "Method": "PutCustomer",
-    "RelativePath": "api/Customers/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "customer",
-        "Type": "NikeShoeStoreApi.Models.Customer",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NikeShoeStoreAPI.Controllers.CustomersController",
-    "Method": "DeleteCustomer",
-    "RelativePath": "api/Customers/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "NikeShoeStoreAPI.Controllers.OrdersController",

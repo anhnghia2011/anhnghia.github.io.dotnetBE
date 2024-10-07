@@ -565,3 +565,6 @@ C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerc.83EB260D.Up2Date
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.genruntimeconfig.cache
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ref\ECommerceAPI.dll
+C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
