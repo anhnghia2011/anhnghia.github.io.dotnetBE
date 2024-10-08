@@ -2,12 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using NikeShoeStoreApi.Data;
 using NikeShoeStoreApi.Models;
-using Newtonsoft.Json;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
-using System.Net.Http;
 
 namespace NikeShoeStoreApi.Controllers
 {
@@ -16,38 +14,41 @@ namespace NikeShoeStoreApi.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly DBContextNikeShoeStore _context;
-        private readonly HttpClient _httpClient;
-        private readonly IConfiguration _configuration;
 
-        public CustomersController(DBContextNikeShoeStore context, HttpClient httpClient, IConfiguration configuration)
+        public CustomersController(DBContextNikeShoeStore context)
         {
             _context = context;
-            _httpClient = httpClient;
-            _configuration = configuration;
         }
 
+        // Register a new customer
         [HttpPost("register")]
         public async Task<ActionResult<Customer>> Register(RegisterDto registerDto)
         {
-            // Check if email already exists
+            // Check if the email is already in use
             if (await _context.Customers.AnyAsync(c => c.Email == registerDto.Email))
             {
                 return BadRequest("Email already in use.");
             }
 
-            // Create new customer
+            // Hash the password and generate a salt
+            var (hashedPassword, salt) = HashPassword(registerDto.Password);
+
+            // Create a new customer object
             var customer = new Customer
             {
                 FirstName = registerDto.FirstName,
                 LastName = registerDto.LastName,
                 Email = registerDto.Email,
                 PhoneNumber = registerDto.PhoneNumber,
-                Password = HashPassword(registerDto.Password) // Mã hóa mật khẩu
+                Password = hashedPassword, // Store the hashed password
+                Salt = salt // Store the generated salt
             };
 
+            // Save the new customer in the database
             _context.Customers.Add(customer);
             await _context.SaveChangesAsync();
 
+            // Return the registered customer data (without the password)
             return Ok(new
             {
                 Id = customer.Id,
@@ -58,16 +59,18 @@ namespace NikeShoeStoreApi.Controllers
             });
         }
 
+        // Login a customer
         [HttpPost("login")]
         public async Task<ActionResult<Customer>> Login(LoginDto loginDto)
         {
-            // Find user by email
+            // Find the customer by email
             var customer = await _context.Customers.SingleOrDefaultAsync(c => c.Email == loginDto.Email);
-            if (customer == null || !VerifyPassword(loginDto.Password, customer.Password)) // So sánh mật khẩu đã mã hóa
+            if (customer == null || !VerifyPassword(loginDto.Password, customer.Password, customer.Salt))
             {
                 return BadRequest("Invalid credentials.");
             }
 
+            // Return the logged-in customer data (without the password)
             return Ok(new
             {
                 Id = customer.Id,
@@ -78,6 +81,7 @@ namespace NikeShoeStoreApi.Controllers
             });
         }
 
+        // Get all customers
         [HttpGet("all")]
         public async Task<ActionResult<IEnumerable<Customer>>> GetAllCustomers()
         {
@@ -85,44 +89,42 @@ namespace NikeShoeStoreApi.Controllers
             return Ok(customers);
         }
 
+        // Delete a customer account
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAccount(int id)
         {
-            // Tìm người dùng theo ID
             var customer = await _context.Customers.FindAsync(id);
             if (customer == null)
             {
                 return NotFound("User not found.");
             }
 
-            // Xóa tài khoản
             _context.Customers.Remove(customer);
             await _context.SaveChangesAsync();
 
-            // Trả về thông báo thành công
-            return NoContent(); // Trả về 204 No Content khi xóa thành công
+            return NoContent();
         }
 
-        // Phương thức để mã hóa mật khẩu
-        private string HashPassword(string password)
+        // Hash the password and generate a salt
+        private (string hashedPassword, string salt) HashPassword(string password)
         {
             using (var hmac = new HMACSHA512())
             {
-                var passwordSalt = hmac.Key; // Tạo salt từ key của HMAC
-                var passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password)); // Mã hóa mật khẩu
-                // Lưu trữ salt và hash ở nơi thích hợp
-                return Convert.ToBase64String(passwordHash);
+                var salt = Convert.ToBase64String(hmac.Key); // Generate a salt
+                var passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password)); // Hash the password with the salt
+                return (Convert.ToBase64String(passwordHash), salt); // Return the hashed password and the salt
             }
         }
 
-        // Phương thức để xác thực mật khẩu
-        private bool VerifyPassword(string password, string storedHash)
+        // Verify the password during login
+        private bool VerifyPassword(string password, string storedHash, string storedSalt)
         {
-            var storedHashBytes = Convert.FromBase64String(storedHash);
-            using (var hmac = new HMACSHA512())
+            var saltBytes = Convert.FromBase64String(storedSalt); // Convert stored salt back to byte array
+            using (var hmac = new HMACSHA512(saltBytes)) // Use the salt to initialize the HMAC
             {
-                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return computedHash.SequenceEqual(storedHashBytes);
+                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password)); // Rehash the input password
+                var storedHashBytes = Convert.FromBase64String(storedHash);
+                return computedHash.SequenceEqual(storedHashBytes); // Compare the computed hash with the stored hash
             }
         }
     }
