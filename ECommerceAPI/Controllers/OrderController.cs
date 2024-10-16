@@ -1,9 +1,11 @@
-﻿using NikeShoeStoreApi.Data;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 using NikeShoeStoreApi.Models;
+using System.Collections.Generic;
+using System.Linq;
+using NikeShoeStoreApi.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace NikeShoeStoreAPI.Controllers
+namespace ECommerceAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -16,81 +18,84 @@ namespace NikeShoeStoreAPI.Controllers
             _context = context;
         }
 
+        // GET: api/orders
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Order>>> GetOrders()
+        public ActionResult<IEnumerable<Order>> GetOrders()
         {
-            return await _context.Orders.Include(o => o.Customer).ToListAsync();
+            return _context.Orders.ToList();
         }
 
+        // GET: api/orders/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<Order>> GetOrder(int id)
+        public ActionResult<Order> GetOrder(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
-
+            var order = _context.Orders.Find(id);
             if (order == null)
             {
                 return NotFound();
             }
-
             return order;
         }
 
         [HttpPost]
-        public async Task<ActionResult<Order>> PostOrder(Order order)
+        public ActionResult<Order> CreateOrder(Order order)
         {
-            _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetOrder), new { id = order.Id }, order);
-        }
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutOrder(int id, Order order)
-        {
-            if (id != order.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(order).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!OrderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteOrder(int id)
-        {
-            var order = await _context.Orders.FindAsync(id);
+            // Kiểm tra nếu order là null
             if (order == null)
             {
-                return NotFound();
+                return BadRequest("Order cannot be null.");
             }
 
-            _context.Orders.Remove(order);
-            await _context.SaveChangesAsync();
+            // Kiểm tra trường 'order' trong OrderDetails
+            if (order.OrderDetails == null || !order.OrderDetails.Any())
+            {
+                return BadRequest("Order must have at least one order detail.");
+            }
 
-            return NoContent();
+            foreach (var detail in order.OrderDetails)
+            {
+                if (string.IsNullOrWhiteSpace(detail.Order))
+                {
+                    return BadRequest("Each order detail must have a valid order field.");
+                }
+
+                if (detail.ProductId <= 0)
+                {
+                    return BadRequest("Each order detail must have a valid product ID.");
+                }
+
+                if (detail.Quantity <= 0)
+                {
+                    return BadRequest("Each order detail must have a valid quantity.");
+                }
+
+                if (detail.UnitPrice <= 0)
+                {
+                    return BadRequest("Each order detail must have a valid unit price greater than 0.");
+                }
+
+                // Tính tổng giá nếu cần thiết
+                detail.TotalPrice = detail.Quantity * detail.UnitPrice;
+            }
+
+            // Lưu đơn hàng vào cơ sở dữ liệu
+            try
+            {
+                _context.Orders.Add(order);
+                _context.SaveChanges();
+            }
+            catch (DbUpdateException dbEx)
+            {
+                return BadRequest(new { message = "An error occurred while saving the order.", details = dbEx.InnerException?.Message });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = "An unexpected error occurred.", details = ex.Message });
+            }
+
+            return CreatedAtAction(nameof(GetOrder), new { id = order.OrderId }, order);
         }
 
-        private bool OrderExists(int id)
-        {
-            return _context.Orders.Any(e => e.Id == id);
-        }
+
     }
 }

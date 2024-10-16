@@ -1,15 +1,13 @@
 ﻿using NikeShoeStoreApi.Data;
-using NikeShoeStoreApi.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Thêm DbContext vào DI container
 builder.Services.AddDbContext<DBContextNikeShoeStore>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddHttpClient();
-
+// Thêm dịch vụ CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -18,6 +16,7 @@ builder.Services.AddCors(options =>
                           .AllowAnyHeader());
 });
 
+// Thêm dịch vụ cho các controller
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
