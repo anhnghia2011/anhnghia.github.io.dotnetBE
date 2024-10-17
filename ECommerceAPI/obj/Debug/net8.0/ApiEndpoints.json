@@ -197,6 +197,22 @@
     ]
   },
   {
+    "ContainingType": "NikeShoeStoreAPI.Controllers.FeedbackController",
+    "Method": "SendFeedback",
+    "RelativePath": "api/Feedback",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "feedback",
+        "Type": "NikeShoeStoreApi.Models.Feedback",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ECommerceAPI.Controllers.OrderDetailsController",
     "Method": "GetOrderDetails",
     "RelativePath": "api/OrderDetails",

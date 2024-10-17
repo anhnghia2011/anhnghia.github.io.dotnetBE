@@ -1,5 +1,6 @@
 ﻿using NikeShoeStoreApi.Data;
 using Microsoft.EntityFrameworkCore;
+using ECommerceAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,9 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Đăng ký EmailService vào DI container
+builder.Services.AddTransient<EmailService>(); // Hoặc sử dụng AddScoped/Singleton tùy thuộc vào nhu cầu của bạn
 
 var app = builder.Build();
 
