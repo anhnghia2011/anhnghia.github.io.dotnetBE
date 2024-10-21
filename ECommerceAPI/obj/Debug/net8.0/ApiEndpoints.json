@@ -46,6 +46,63 @@
     ]
   },
   {
+    "ContainingType": "NikeShoeStoreApi.Controllers.CartController",
+    "Method": "ClearCartItems",
+    "RelativePath": "api/Cart/clear",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NikeShoeStoreApi.Controllers.CartController",
+    "Method": "RemoveFromCart",
+    "RelativePath": "api/Cart/remove/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NikeShoeStoreApi.Controllers.CartController",
+    "Method": "UpdateCartItem",
+    "RelativePath": "api/Cart/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "ECommerceAPI.Models.UpdateQuantityRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NikeShoeStoreApi.Models.CartItems",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "NikeShoeStoreAPI.Controllers.CategoriesController",
     "Method": "GetCategories",
     "RelativePath": "api/Categories",
@@ -350,58 +407,6 @@
       }
     ],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "NikeShoeStoreApi.Controllers.OrderDetailController",
-    "Method": "AddOrderDetail",
-    "RelativePath": "api/OrderDetail",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "orderDetail",
-        "Type": "NikeShoeStoreApi.Models.OrderDetail",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "NikeShoeStoreApi.Models.OrderDetail",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "NikeShoeStoreApi.Controllers.OrderDetailController",
-    "Method": "GetOrderDetails",
-    "RelativePath": "api/OrderDetail/order/{orderId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "orderId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[NikeShoeStoreApi.Models.OrderDetail, ECommerceAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   },
   {
     "ContainingType": "NikeShoeStoreAPI.Controllers.ProductsController",

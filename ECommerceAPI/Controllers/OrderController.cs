@@ -2,6 +2,7 @@
 using NikeShoeStoreApi.Models;
 using NikeShoeStoreApi.Data;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace NikeShoeStoreApi.Controllers
 {
@@ -16,19 +17,26 @@ namespace NikeShoeStoreApi.Controllers
             _context = context;
         }
 
-        // Lấy danh sách đơn hàng
+        // Lấy danh sách đơn hàng (Get all orders)
         [HttpGet]
         public ActionResult<List<Order>> GetOrders()
         {
-            var orders = _context.Orders.ToList();
+            // Include related CartItems
+            var orders = _context.Orders
+                                 .Include(o => o.CartItems)
+                                 .ToList();
             return Ok(orders);
         }
 
-        // Lấy thông tin đơn hàng theo ID
+        // Lấy thông tin đơn hàng theo ID (Get order by ID)
         [HttpGet("{id}")]
         public ActionResult<Order> GetOrder(int id)
         {
-            var order = _context.Orders.Find(id);
+            // Find order and include related CartItems
+            var order = _context.Orders
+                                .Include(o => o.CartItems)
+                                .FirstOrDefault(o => o.OrderId == id);
+
             if (order == null)
             {
                 return NotFound("Order not found.");
@@ -37,21 +45,33 @@ namespace NikeShoeStoreApi.Controllers
             return Ok(order);
         }
 
-        // Tạo đơn hàng mới
+        // Tạo đơn hàng mới (Create a new order)
         [HttpPost]
         public ActionResult<Order> CreateOrder(Order order)
         {
+            // Check if the customer exists
             var customerExists = _context.Customers.Any(c => c.Id == order.CustomerId);
             if (!customerExists)
             {
                 return BadRequest("Invalid CustomerId.");
             }
 
+            // Validate that there are cart items in the order
+            if (order.CartItems == null || !order.CartItems.Any())
+            {
+                return BadRequest("The order must contain at least one item.");
+            }
+
+            // Calculate total amount based on cart items
+            order.TotalAmount = order.CartItems.Sum(item => item.Price * item.Quantity);
+
             _context.Orders.Add(order);
             _context.SaveChanges();
+
             return CreatedAtAction(nameof(GetOrder), new { id = order.OrderId }, order);
         }
-        // Cập nhật trạng thái đơn hàng
+
+        // Cập nhật trạng thái đơn hàng (Update order status)
         [HttpPut("{id}")]
         public ActionResult UpdateOrderStatus(int id, [FromBody] string status)
         {

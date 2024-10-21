@@ -2,10 +2,12 @@
 {
     public class CartItems
     {
-        public int Id { get; set; } // Assuming there's a unique identifier
-        public int ProductId { get; set; } // Product ID
-        public int Quantity { get; set; } // Quantity of the product
-        public int Size { get; set; } // Product size (if applicable)
-        // Add other properties as necessary
+            public int Id { get; set; }
+            public int ProductId { get; set; }
+            public int Quantity { get; set; }
+            public int Size { get; set; }
+            public string ProductName { get; set; }
+            public string ProductImage { get; set; }
+            public decimal Price { get; set; }
     }
 }

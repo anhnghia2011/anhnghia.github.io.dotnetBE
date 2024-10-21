@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NikeShoeStoreApi.Data;
 
@@ -11,9 +12,11 @@ using NikeShoeStoreApi.Data;
 namespace ECommerceAPI.Migrations
 {
     [DbContext(typeof(DBContextNikeShoeStore))]
-    partial class DBContextNikeShoeStoreModelSnapshot : ModelSnapshot
+    [Migration("20241021045304_addtocart")]
+    partial class addtocart
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,12 +32,6 @@ namespace ECommerceAPI.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
@@ -54,8 +51,6 @@ namespace ECommerceAPI.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
 
                     b.ToTable("CartItems");
                 });
@@ -202,6 +197,8 @@ namespace ECommerceAPI.Migrations
 
                     b.HasKey("OrderDetailId");
 
+                    b.HasIndex("OrderId");
+
                     b.ToTable("OrderDetails");
                 });
 
@@ -257,18 +254,20 @@ namespace ECommerceAPI.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("NikeShoeStoreApi.Models.CartItems", b =>
-                {
-                    b.HasOne("NikeShoeStoreApi.Models.Order", null)
-                        .WithMany("CartItems")
-                        .HasForeignKey("OrderId");
-                });
-
             modelBuilder.Entity("NikeShoeStoreApi.Models.Order", b =>
                 {
                     b.HasOne("NikeShoeStoreApi.Models.Customer", null)
                         .WithMany("Orders")
                         .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("NikeShoeStoreApi.Models.OrderDetail", b =>
+                {
+                    b.HasOne("NikeShoeStoreApi.Models.Order", null)
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -291,7 +290,7 @@ namespace ECommerceAPI.Migrations
 
             modelBuilder.Entity("NikeShoeStoreApi.Models.Order", b =>
                 {
-                    b.Navigation("CartItems");
+                    b.Navigation("OrderDetails");
                 });
 #pragma warning restore 612, 618
         }

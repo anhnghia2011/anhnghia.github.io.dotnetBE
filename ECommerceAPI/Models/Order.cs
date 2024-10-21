@@ -2,11 +2,11 @@
 {
     public class Order
     {
-        public int OrderId { get; set; }
-        public int CustomerId { get; set; }
-        public DateTime OrderDate { get; set; }
-        public string Status { get; set; } = "Pending"; // Trạng thái đơn hàng
-        public decimal TotalAmount { get; set; }
-        public List<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
+        public int OrderId { get; set; } // Unique identifier for the order
+        public int CustomerId { get; set; } // ID of the customer placing the order
+        public DateTime OrderDate { get; set; } = DateTime.Now; // The date the order is placed, defaults to current date
+        public string Status { get; set; } = "Pending"; // Default order status
+        public decimal TotalAmount { get; set; } // Total amount of the order
+        public List<CartItems> CartItems { get; set; } = new List<CartItems>(); // List of cart items
     }
 }
