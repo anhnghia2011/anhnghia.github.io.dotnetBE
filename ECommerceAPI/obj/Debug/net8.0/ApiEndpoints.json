@@ -300,6 +300,58 @@
     ]
   },
   {
+    "ContainingType": "NikeShoeStoreApi.Controllers.CustomersController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Customers/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateProfileDto",
+        "Type": "NikeShoeStoreApi.Models.UpdateProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NikeShoeStoreApi.Models.Customer",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NikeShoeStoreApi.Controllers.CustomersController",
+    "Method": "UpdatePassword",
+    "RelativePath": "api/Customers/updatepassword/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "passwordDto",
+        "Type": "NikeShoeStoreApi.Models.UpdatePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "NikeShoeStoreAPI.Controllers.FeedbackController",
     "Method": "SendFeedback",
     "RelativePath": "api/Feedback",

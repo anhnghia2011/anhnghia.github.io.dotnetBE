@@ -36,8 +36,8 @@ namespace NikeShoeStoreApi.Controllers
                 LastName = registerDto.LastName,
                 Email = registerDto.Email,
                 PhoneNumber = registerDto.PhoneNumber,
-                Password = hashedPassword, 
-                Salt = salt 
+                Password = hashedPassword,
+                Salt = salt
             };
 
             _context.Customers.Add(customer);
@@ -56,7 +56,6 @@ namespace NikeShoeStoreApi.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<Customer>> Login(LoginDto loginDto)
         {
-           
             var customer = await _context.Customers.SingleOrDefaultAsync(c => c.Email == loginDto.Email);
             if (customer == null || !VerifyPassword(loginDto.Password, customer.Password, customer.Salt))
             {
@@ -80,6 +79,63 @@ namespace NikeShoeStoreApi.Controllers
             return Ok(customers);
         }
 
+        [HttpPut("update/{id}")]
+        public async Task<ActionResult<Customer>> UpdateProfile(int id, [FromBody] UpdateProfileDto updateProfileDto)
+        {
+            var customer = await _context.Customers.FindAsync(id);
+            if (customer == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            // Cập nhật thông tin khách hàng
+            customer.FirstName = updateProfileDto.FirstName ?? customer.FirstName;
+            customer.LastName = updateProfileDto.LastName ?? customer.LastName;
+            customer.Email = updateProfileDto.Email ?? customer.Email;
+            customer.PhoneNumber = updateProfileDto.PhoneNumber ?? customer.PhoneNumber;
+
+            // Lưu thay đổi vào cơ sở dữ liệu
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                Id = customer.Id,
+                FirstName = customer.FirstName,
+                LastName = customer.LastName,
+                Email = customer.Email,
+                PhoneNumber = customer.PhoneNumber
+            });
+        }
+        [HttpPut("updatepassword/{id:int}")]
+        public async Task<IActionResult> UpdatePassword(int id, [FromBody] UpdatePasswordDto passwordDto)
+        {
+            // Validate the incoming model
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            // Fetch the user from the database using the provided id
+            var user = await _context.Customers.FindAsync(id);
+            if (user == null)
+            {
+                return NotFound($"User with ID {id} not found.");
+            }
+
+            // Verify the current password
+            if (!VerifyPassword(passwordDto.CurrentPassword, user.Password, user.Salt))
+            {
+                return BadRequest("Current password is incorrect.");
+            }
+
+            // Hash the new password and update the user object
+            var (newHashedPassword, newSalt) = HashPassword(passwordDto.NewPassword);
+            user.Password = newHashedPassword;
+            user.Salt = newSalt;
+
+            // Save changes to the database
+            await _context.SaveChangesAsync();
+            return Ok("Password updated successfully.");
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAccount(int id)
         {
@@ -99,20 +155,20 @@ namespace NikeShoeStoreApi.Controllers
         {
             using (var hmac = new HMACSHA512())
             {
-                var salt = Convert.ToBase64String(hmac.Key); 
-                var passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password)); 
+                var salt = Convert.ToBase64String(hmac.Key);
+                var passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
                 return (Convert.ToBase64String(passwordHash), salt);
             }
         }
 
         private bool VerifyPassword(string password, string storedHash, string storedSalt)
         {
-            var saltBytes = Convert.FromBase64String(storedSalt); 
-            using (var hmac = new HMACSHA512(saltBytes)) 
+            var saltBytes = Convert.FromBase64String(storedSalt);
+            using (var hmac = new HMACSHA512(saltBytes))
             {
-                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password)); 
+                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
                 var storedHashBytes = Convert.FromBase64String(storedHash);
-                return computedHash.SequenceEqual(storedHashBytes); 
+                return computedHash.SequenceEqual(storedHashBytes);
             }
         }
     }
