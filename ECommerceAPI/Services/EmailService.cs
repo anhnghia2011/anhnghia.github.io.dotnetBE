@@ -3,7 +3,7 @@ using MimeKit;
 using System.Threading.Tasks;
 using NikeShoeStoreApi.Models;
 
-namespace ECommerceAPI.Services
+namespace NikeShoeStoreApi.Services
 {
     public class EmailService
     {

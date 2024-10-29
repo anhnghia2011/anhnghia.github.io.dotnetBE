@@ -88,13 +88,11 @@ namespace NikeShoeStoreApi.Controllers
                 return NotFound("User not found.");
             }
 
-            // Cập nhật thông tin khách hàng
             customer.FirstName = updateProfileDto.FirstName ?? customer.FirstName;
             customer.LastName = updateProfileDto.LastName ?? customer.LastName;
             customer.Email = updateProfileDto.Email ?? customer.Email;
             customer.PhoneNumber = updateProfileDto.PhoneNumber ?? customer.PhoneNumber;
 
-            // Lưu thay đổi vào cơ sở dữ liệu
             await _context.SaveChangesAsync();
 
             return Ok(new
@@ -109,29 +107,24 @@ namespace NikeShoeStoreApi.Controllers
         [HttpPut("updatepassword/{id:int}")]
         public async Task<IActionResult> UpdatePassword(int id, [FromBody] UpdatePasswordDto passwordDto)
         {
-            // Validate the incoming model
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            // Fetch the user from the database using the provided id
             var user = await _context.Customers.FindAsync(id);
             if (user == null)
             {
                 return NotFound($"User with ID {id} not found.");
             }
 
-            // Verify the current password
             if (!VerifyPassword(passwordDto.CurrentPassword, user.Password, user.Salt))
             {
                 return BadRequest("Current password is incorrect.");
             }
 
-            // Hash the new password and update the user object
             var (newHashedPassword, newSalt) = HashPassword(passwordDto.NewPassword);
             user.Password = newHashedPassword;
             user.Salt = newSalt;
 
-            // Save changes to the database
             await _context.SaveChangesAsync();
             return Ok("Password updated successfully.");
         }

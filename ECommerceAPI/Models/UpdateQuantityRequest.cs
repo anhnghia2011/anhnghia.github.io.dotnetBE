@@ -1,4 +1,4 @@
-﻿namespace ECommerceAPI.Models
+﻿namespace NikeShoeStoreApi.Models
 {
     public class UpdateQuantityRequest
     {

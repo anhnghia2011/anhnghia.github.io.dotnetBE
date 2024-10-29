@@ -1,7 +1,7 @@
 ﻿using NikeShoeStoreApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using ECommerceAPI.Services;
+using NikeShoeStoreApi.Services;
 
 namespace NikeShoeStoreAPI.Controllers
 {
