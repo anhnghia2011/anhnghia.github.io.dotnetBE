@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NikeShoeStoreApi.Models;
 using NikeShoeStoreApi.Data;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
 namespace NikeShoeStoreApi.Controllers
@@ -16,6 +18,7 @@ namespace NikeShoeStoreApi.Controllers
         {
             _context = context;
         }
+
         [HttpGet]
         public ActionResult<List<Order>> GetOrders()
         {
@@ -24,6 +27,7 @@ namespace NikeShoeStoreApi.Controllers
                                  .ToList();
             return Ok(orders);
         }
+
         [HttpGet("user/{userId}")]
         public async Task<ActionResult<IEnumerable<Order>>> GetOrdersByUserId(int userId)
         {
@@ -56,22 +60,31 @@ namespace NikeShoeStoreApi.Controllers
         }
 
         [HttpPost]
-        public ActionResult<Order> CreateOrder(Order order)
+        public async Task<ActionResult<Order>> CreateOrder(Order order)
         {
-            var customerExists = _context.Customers.Any(c => c.Id == order.CustomerId);
+            // Check if the customer exists
+            var customerExists = await _context.Customers.AnyAsync(c => c.Id == order.CustomerId);
             if (!customerExists)
             {
                 return BadRequest("Invalid CustomerId.");
             }
 
+            // Ensure there are CartItems
             if (order.CartItems == null || !order.CartItems.Any())
             {
                 return BadRequest("The order must contain at least one item.");
             }
-            order.TotalAmount = order.CartItems.Sum(item => item.Price * item.Quantity);
 
+            // Calculate total amount and prepare CartItems for the order
+            order.TotalAmount = order.CartItems.Sum(item => item.Price * item.Quantity);
+            foreach (var item in order.CartItems)
+            {
+                item.Id = 0; // Reset Id to ensure a new CartItem entry is created
+            }
+
+            // Add the order to the context
             _context.Orders.Add(order);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync(); // Save changes asynchronously
 
             return CreatedAtAction(nameof(GetOrder), new { id = order.OrderId }, order);
         }

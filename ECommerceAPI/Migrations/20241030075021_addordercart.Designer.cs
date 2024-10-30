@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NikeShoeStoreApi.Data;
 
@@ -11,9 +12,11 @@ using NikeShoeStoreApi.Data;
 namespace ECommerceAPI.Migrations
 {
     [DbContext(typeof(DBContextNikeShoeStore))]
-    partial class DBContextNikeShoeStoreModelSnapshot : ModelSnapshot
+    [Migration("20241030075021_addordercart")]
+    partial class addordercart
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +25,7 @@ namespace ECommerceAPI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("NikeShoeStoreApi.Models.CartItems", b =>
+            modelBuilder.Entity("CartItems", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -50,8 +53,9 @@ namespace ECommerceAPI.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("Size")
-                        .HasColumnType("int");
+                    b.Property<string>("Size")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -149,34 +153,6 @@ namespace ECommerceAPI.Migrations
                     b.ToTable("Feedback");
                 });
 
-            modelBuilder.Entity("NikeShoeStoreApi.Models.Order", b =>
-                {
-                    b.Property<int>("OrderId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
-
-                    b.Property<int>("CustomerId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("OrderDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("TotalAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("OrderId");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("Orders");
-                });
-
             modelBuilder.Entity("NikeShoeStoreApi.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -229,20 +205,42 @@ namespace ECommerceAPI.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("NikeShoeStoreApi.Models.CartItems", b =>
+            modelBuilder.Entity("Order", b =>
                 {
-                    b.HasOne("NikeShoeStoreApi.Models.Order", null)
-                        .WithMany("CartItems")
-                        .HasForeignKey("OrderId");
+                    b.Property<int>("OrderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("OrderId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("NikeShoeStoreApi.Models.Order", b =>
+            modelBuilder.Entity("CartItems", b =>
                 {
-                    b.HasOne("NikeShoeStoreApi.Models.Customer", null)
-                        .WithMany("Orders")
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("Order", "Order")
+                        .WithMany("CartItems")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("NikeShoeStoreApi.Models.Product", b =>
@@ -256,12 +254,21 @@ namespace ECommerceAPI.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Order", b =>
+                {
+                    b.HasOne("NikeShoeStoreApi.Models.Customer", null)
+                        .WithMany("Orders")
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("NikeShoeStoreApi.Models.Customer", b =>
                 {
                     b.Navigation("Orders");
                 });
 
-            modelBuilder.Entity("NikeShoeStoreApi.Models.Order", b =>
+            modelBuilder.Entity("Order", b =>
                 {
                     b.Navigation("CartItems");
                 });
