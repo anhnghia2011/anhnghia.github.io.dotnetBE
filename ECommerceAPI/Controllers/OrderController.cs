@@ -62,29 +62,24 @@ namespace NikeShoeStoreApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Order>> CreateOrder(Order order)
         {
-            // Check if the customer exists
             var customerExists = await _context.Customers.AnyAsync(c => c.Id == order.CustomerId);
             if (!customerExists)
             {
                 return BadRequest("Invalid CustomerId.");
             }
 
-            // Ensure there are CartItems
             if (order.CartItems == null || !order.CartItems.Any())
             {
                 return BadRequest("The order must contain at least one item.");
             }
 
-            // Calculate total amount and prepare CartItems for the order
             order.TotalAmount = order.CartItems.Sum(item => item.Price * item.Quantity);
             foreach (var item in order.CartItems)
             {
-                item.Id = 0; // Reset Id to ensure a new CartItem entry is created
+                item.Id = 0; 
             }
-
-            // Add the order to the context
             _context.Orders.Add(order);
-            await _context.SaveChangesAsync(); // Save changes asynchronously
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction(nameof(GetOrder), new { id = order.OrderId }, order);
         }

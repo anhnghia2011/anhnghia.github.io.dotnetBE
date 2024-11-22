@@ -15,6 +15,5 @@ namespace NikeShoeStoreApi.Data
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Feedback> Feedback { get; set; }
         public DbSet<CartItems> CartItems { get; set; }
-
     }
 }

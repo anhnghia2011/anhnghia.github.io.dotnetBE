@@ -426,19 +426,9 @@ C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.AssemblyInfoInputs.cache
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.AssemblyInfo.cs
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.csproj.CoreCompileInputs.cache
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.sourcelink.json
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.dll
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\refint\ECommerceAPI.dll
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.pdb
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\appsettings.json
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\ECommerceAPI.exe
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\ECommerceAPI.deps.json
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\ECommerceAPI.runtimeconfig.json
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\ECommerceAPI.dll
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\ECommerceAPI.pdb
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Humanizer.dll
@@ -556,15 +546,9 @@ C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets\msbuild.ECommerceAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.ECommerceAPI.props
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ECommerceAPI.props
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ECommerceAPI.props
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\scopedcss\bundle\ECommerceAPI.styles.css
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerc.83EB260D.Up2Date
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ECommerceAPI.genruntimeconfig.cache
-C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ref\ECommerceAPI.dll
 C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
 C:\Users\nghia.nguyen\Documents\GitHub\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
@@ -577,3 +561,19 @@ C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\MimeKit.dll
 C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\NikeShoeStoreApi.exe
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\NikeShoeStoreApi.deps.json
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\NikeShoeStoreApi.runtimeconfig.json
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\NikeShoeStoreApi.dll
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\bin\Debug\net8.0\NikeShoeStoreApi.pdb
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\NikeShoeStoreApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\NikeShoeStoreApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets\msbuild.NikeShoeStoreApi.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.NikeShoeStoreApi.props
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.NikeShoeStoreApi.props
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.NikeShoeStoreApi.props
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\scopedcss\bundle\NikeShoeStoreApi.styles.css
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\NikeShoeStoreApi.dll
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\refint\NikeShoeStoreApi.dll
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\NikeShoeStoreApi.pdb
+C:\Users\anh nghia\OneDrive\Desktop\mnm\anhnghia.github.io.dotnetBE\ECommerceAPI\obj\Debug\net8.0\ref\NikeShoeStoreApi.dll

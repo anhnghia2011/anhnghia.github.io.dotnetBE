@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "ECommerceAPI/1.0.0": {
+      "NikeShoeStoreApi/1.0.0": {
         "dependencies": {
           "MailKit": "4.8.0",
           "Microsoft.AspNetCore.Authentication.Google": "8.0.7",
@@ -20,7 +20,7 @@
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
-          "ECommerceAPI.dll": {}
+          "NikeShoeStoreApi.dll": {}
         }
       },
       "Azure.Core/1.35.0": {
@@ -1031,7 +1031,7 @@
     }
   },
   "libraries": {
-    "ECommerceAPI/1.0.0": {
+    "NikeShoeStoreApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
