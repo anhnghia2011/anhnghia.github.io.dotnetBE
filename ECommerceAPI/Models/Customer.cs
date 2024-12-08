@@ -10,9 +10,10 @@
         public string Password { get; set; }
         public string Salt { get; set; }
         public ICollection<Order> Orders { get; set; }
-        
 
-            public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-            public bool IsActive { get; set; } = true;
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public bool IsActive { get; set; } = true;
+        public string Role { get; set; } = "User";
     }
 }

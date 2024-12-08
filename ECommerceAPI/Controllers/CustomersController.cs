@@ -37,7 +37,8 @@ namespace NikeShoeStoreApi.Controllers
                 Email = registerDto.Email,
                 PhoneNumber = registerDto.PhoneNumber,
                 Password = hashedPassword,
-                Salt = salt
+                Salt = salt,
+                Role = "User"
             };
 
             _context.Customers.Add(customer);
@@ -49,12 +50,13 @@ namespace NikeShoeStoreApi.Controllers
                 FirstName = customer.FirstName,
                 LastName = customer.LastName,
                 Email = customer.Email,
-                PhoneNumber = customer.PhoneNumber
+                PhoneNumber = customer.PhoneNumber,
+                Role = customer.Role 
             });
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<Customer>> Login(LoginDto loginDto)
+        public async Task<ActionResult> Login(LoginDto loginDto)
         {
             var customer = await _context.Customers.SingleOrDefaultAsync(c => c.Email == loginDto.Email);
             if (customer == null || !VerifyPassword(loginDto.Password, customer.Password, customer.Salt))
@@ -68,7 +70,7 @@ namespace NikeShoeStoreApi.Controllers
                 FirstName = customer.FirstName,
                 LastName = customer.LastName,
                 Email = customer.Email,
-                PhoneNumber = customer.PhoneNumber
+                Role = customer.Role 
             });
         }
 
@@ -104,6 +106,7 @@ namespace NikeShoeStoreApi.Controllers
                 PhoneNumber = customer.PhoneNumber
             });
         }
+
         [HttpPut("updatepassword/{id:int}")]
         public async Task<IActionResult> UpdatePassword(int id, [FromBody] UpdatePasswordDto passwordDto)
         {
